@@ -3,9 +3,12 @@ frontend:
   phases:
     preBuild:
       commands:
+        - echo "Installing Node 20.x"
+        - n 20
         - npm ci
     build:
       commands:
+        - echo "Building project..."
         - npm run build
   artifacts:
     baseDirectory: dist

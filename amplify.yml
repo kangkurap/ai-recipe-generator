@@ -3,13 +3,12 @@ frontend:
   phases:
     preBuild:
       commands:
-        - cd ai-recipe-generator
         - npm ci
     build:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: ai-recipe-generator/dist
+    baseDirectory: dist
     files:
       - '**/*'
   cache:
